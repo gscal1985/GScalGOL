@@ -17,7 +17,7 @@ namespace GScalGOL
 
         // Drawing colors
         Color gridColor = Color.Black;
-        Color cellColor = Color.Gray;
+        Color cellColor = Color.MediumAquamarine;
 
         // The Timer class
         Timer timer = new Timer();
@@ -32,13 +32,28 @@ namespace GScalGOL
             // Setup the timer
             timer.Interval = 100; // milliseconds
             timer.Tick += Timer_Tick;
-            timer.Enabled = true; // start timer running
+            timer.Enabled = false; // start timer running
         }
+
+
+        //Count the Neighbors
+        private int CountNeighbors(int x, int y) {
+            int count;
+            count = 0;
+            return count;
+        }
+
 
         // Calculate the next generation of cells
         private void NextGeneration()
         {
-
+            for (int y = 0; y < universe.GetLength(1); y++)
+            {
+                // Iterate through the universe in the x, left to right
+                for (int x = 0; x < universe.GetLength(0); x++)
+                {
+                 }
+            }
 
             // Increment generation count
             generations++;
@@ -117,6 +132,11 @@ namespace GScalGOL
                 // Tell Windows you need to repaint
                 graphicsPanel1.Invalidate();
             }
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
