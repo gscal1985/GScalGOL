@@ -52,6 +52,7 @@ namespace GScalGOL
                 // Iterate through the universe in the x, left to right
                 for (int x = 0; x < universe.GetLength(0); x++)
                 {
+                    CountNeighbors(x,y);
                  }
             }
 
